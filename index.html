@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <title>SunSystem</title>
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="p5.js"></script>
+    <script>
+        function setup() {
+            createCanvas(windowWidth, windowHeight, WEBGL);
+        }
+
+        function draw() {
+            let p1 = createVector(0, 0);
+// Sun
+            background(205, 105, 94);
+            rotateY(millis() / 600);
+            sphere(40, 20, 16);
+// First Planet
+            push();
+            translate(250, 0, 0);
+            rotateY(millis() / 1000);
+            sphere(15, 20, 16);
+            pop();
+
+//Earth
+            push();
+            translate(100, 0, 0);
+            rotateY(millis() / 1000);
+            sphere(20, 20, 16);
+
+// Moon
+            translate(130, 0, 0);
+            rotateY(millis() / 1000);
+            sphere(8, 20, 16);
+            pop();
+//Third planet
+            push();
+            translate(450, 0, 0);
+            rotateY(millis() / 1000);
+            sphere(25, 20, 16);
+
+
+
+            pop();
+        }
+    </script>
+</body>
+
+</html>
